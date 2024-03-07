@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="js csstransforms3d">
+<html lang="en" class="js csstransforms3d">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Dọn dẹp tài nguyên :: Triển khai ứng dụng với CodePipeline và Elastic Beanstalk</title>
+    <title>Clean up resources :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1709840783" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1709840783" rel="stylesheet">
-    <link href="/css/hybrid.css?1709840783" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1709840783" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1709840783" rel="stylesheet">
-    <link href="/css/auto-complete.css?1709840783" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1709840783" rel="stylesheet">
-    <link href="/css/theme.css?1709840783" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1709840783" rel="stylesheet">
+    <link href="/css/nucleus.css?1709852926" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1709852926" rel="stylesheet">
+    <link href="/css/hybrid.css?1709852926" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1709852926" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1709852926" rel="stylesheet">
+    <link href="/css/auto-complete.css?1709852926" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1709852926" rel="stylesheet">
+    <link href="/css/theme.css?1709852926" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1709852926" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1709840783" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1709852926" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1709840783"></script>
+    <script src="/js/jquery-3.3.1.min.js?1709852926"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/4-cleanup/">
+  <body class="" data-url="/4-cleanup/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1709840783"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1709840783"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1709852926"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1709852926"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1709840783"></script>
+<script type="text/javascript" src="/js/search.js?1709852926"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduction/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/1-introduction/" title="Introduction" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-introduction/">
-           <b> 1. </b> Giới thiệu
+      <a href="/1-introduction/">
+           <b> 1. </b> Introduction
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/" title="Triển khai Elastic Beanstalk Environment" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/" title="Create Elastic Beanstalk Environment" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/">
-           <b> 2. </b> Triển khai Elastic Beanstalk Environment
+      <a href="/2-elasticbeanstalk/">
+           <b> 2. </b> Create Elastic Beanstalk Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.1-createvpc/" title="Tạo VPC" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.1-createvpc/" title="Create a VPC" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.1-createvpc/">
-           <b> 2.1 </b> Tạo VPC
+      <a href="/2-elasticbeanstalk/2.1-createvpc/">
+           <b> 2.1 </b> Create a VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.2-enablepublicip/" title="Bật Public IP cho Public Subnet" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.2-enablepublicip/" title="Enable auto-assign public IPv4 address" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.2-enablepublicip/">
-           <b> 2.2 </b> Bật Public IP cho Public Subnet
+      <a href="/2-elasticbeanstalk/2.2-enablepublicip/">
+           <b> 2.2 </b> Enable auto-assign public IPv4 address
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +195,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.3-createkeypair/" title="Tạo EC2 Keypair" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.3-createkeypair/" title="Create EC2 Keypair" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.3-createkeypair/">
-           <b> 2.3 </b> Tạo EC2 Keypair
+      <a href="/2-elasticbeanstalk/2.3-createkeypair/">
+           <b> 2.3 </b> Create EC2 Keypair
           
             <i class="fas fa-check read-icon"></i>
           
@@ -223,13 +223,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.4-instanceprofile/" title="Tạo EC2 Instance Profile" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.4-instanceprofile/" title="Create EC2 Instance Profile" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.4-instanceprofile/">
-           <b> 2.4 </b> Tạo EC2 Instance Profile
+      <a href="/2-elasticbeanstalk/2.4-instanceprofile/">
+           <b> 2.4 </b> Create EC2 Instance Profile
           
             <i class="fas fa-check read-icon"></i>
           
@@ -251,13 +251,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.5-createenv/" title="Triển khai Environment" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.5-createenv/" title="Deploy the Environment" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.5-createenv/">
-           <b> 2.5 </b> Triển khai Environment
+      <a href="/2-elasticbeanstalk/2.5-createenv/">
+           <b> 2.5 </b> Deploy the Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -279,13 +279,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.6-testenv/" title="Kiểm tra Environment" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.6-testenv/" title="Test the Environment" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.6-testenv/">
-           <b> 2.6 </b> Kiểm tra Environment
+      <a href="/2-elasticbeanstalk/2.6-testenv/">
+           <b> 2.6 </b> Test the Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -314,13 +314,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/" title="Triển khai CodePipeline" class="dd-item 
+    <li data-nav-id="/3-codepipeline/" title="Deploy CodePipeline" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/">
-           <b> 3. </b> Triển khai CodePipeline
+      <a href="/3-codepipeline/">
+           <b> 3. </b> Deploy CodePipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -345,13 +345,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.1-createbucket/" title="Tạo S3 Bucket" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.1-createbucket/" title="Create a new S3 Bucket" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.1-createbucket/">
-           <b> 3.1 </b> Tạo S3 Bucket
+      <a href="/3-codepipeline/3.1-createbucket/">
+           <b> 3.1 </b> Create a new S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
           
@@ -373,13 +373,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.2-connecttogithub/" title="Kết nối Github với AWS" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.2-connecttogithub/" title="Connect AWS to Github" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.2-connecttogithub/">
-           <b> 3.2 </b> Kết nối Github với AWS
+      <a href="/3-codepipeline/3.2-connecttogithub/">
+           <b> 3.2 </b> Connect AWS to Github
           
             <i class="fas fa-check read-icon"></i>
           
@@ -401,13 +401,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.3-createpipeline/" title="Tạo Pipeline" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.3-createpipeline/" title="Create a new Pipeline" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.3-createpipeline/">
-           <b> 3.3 </b> Tạo Pipeline
+      <a href="/3-codepipeline/3.3-createpipeline/">
+           <b> 3.3 </b> Create a new Pipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -429,13 +429,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.4-addrolepolicy/" title="Add policy to the Service Role" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.4-addrolepolicy/" title="Add Policy for Service Role" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.4-addrolepolicy/">
-           <b> 3.4 </b> Add policy to the Service Role
+      <a href="/3-codepipeline/3.4-addrolepolicy/">
+           <b> 3.4 </b> Add Policy for Service Role
           
             <i class="fas fa-check read-icon"></i>
           
@@ -457,13 +457,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.5-testpipeline/" title="Kiểm thử Pipeline" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.5-testpipeline/" title="Test the Pipeline" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.5-testpipeline/">
-           <b> 3.5 </b> Kiểm thử Pipeline
+      <a href="/3-codepipeline/3.5-testpipeline/">
+           <b> 3.5 </b> Test the Pipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -492,13 +492,13 @@
  
   
     
-    <li data-nav-id="/vi/4-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
+    <li data-nav-id="/4-cleanup/" title="Clean up resources" class="dd-item 
         
         active
         
         ">
-      <a href="/vi/4-cleanup/">
-           <b> 4. </b> Dọn dẹp tài nguyên
+      <a href="/4-cleanup/">
+           <b> 4. </b> Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -520,11 +520,11 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+                  <a class="padding" href="https://aws.amazon.com/blogs"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
               </li>
           
               <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a>
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
               </li>
           
         </ul>
@@ -549,7 +549,7 @@
                   
                     
                     
-                      <option id="en" value="/4-cleanup/">English</option>
+                      <option id="en" value="/4-cleanup/" selected>English</option>
                     
                   
               
@@ -563,7 +563,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/4-cleanup/" selected>Tiếng Việt</option>
+                      <option id="vi" value="/vi/4-cleanup/">Tiếng Việt</option>
                     
                   
               
@@ -652,7 +652,7 @@
             
           
           
-            <a href='/vi/'>Triển khai ứng dụng với CodePipeline và Elastic Beanstalk</a> > Dọn dẹp tài nguyên
+            <a href='/'>Implement pipeline for Elastic Beanstalk application</a> > Clean up resources
           
         
           
@@ -687,7 +687,7 @@
           
             <h1>
               
-              Dọn dẹp tài nguyên
+              Clean up resources
             </h1>
           
 
@@ -695,88 +695,88 @@
 
 
 
-	<h4 id="dọn-dẹp-tài-nguyên">Dọn dẹp tài nguyên</h4>
+	<h4 id="clean-up-resources">Clean up resources</h4>
 <ol>
 <li>
-<p>Xoá Pipeline</p>
+<p>Delete Pipeline</p>
 <ul>
-<li>Truy cập vào trang quản trị <strong>CodePipeline</strong>.</li>
-<li>Chọn Pipeline bạn vừa tạo.</li>
-<li>Chọn <strong>Delete pipeline</strong>.</li>
+<li>Go to <strong>CodePipeline</strong>.</li>
+<li>Select Pipeline we have created.</li>
+<li>Select <strong>Delete pipeline</strong>.</li>
 </ul>
 </li>
 <li>
-<p>Xoá CodeBuild Project.</p>
+<p>Delete CodeBuild Project.</p>
 <ul>
-<li>Truy cập vào trang quản trị <strong>CodeBuild</strong>.</li>
-<li>Chọn Project bạn đã tạo.</li>
-<li>Chọn <strong>Actions</strong> &gt; <strong>Delete</strong>.</li>
+<li>Go to <strong>CodeBuild</strong>.</li>
+<li>Select Project we have created.</li>
+<li>Select <strong>Actions</strong> &gt; <strong>Delete</strong>.</li>
 </ul>
 </li>
 <li>
-<p>Xoá kết nối Github</p>
+<p>Delete Github Connection</p>
 <ul>
-<li>Chọn <strong>Settings</strong> &gt; <strong>Connections</strong>.</li>
-<li>Chọn Connection bạn vừa tạo.</li>
-<li>Chọn <strong>Delete</strong>.</li>
+<li>Select <strong>Settings</strong> &gt; <strong>Connections</strong>.</li>
+<li>Select Connection we have created.</li>
+<li>Select <strong>Delete</strong>.</li>
 </ul>
 </li>
 <li>
-<p>Xoá Elastic Beanstalk Application</p>
+<p>Delete Elastic Beanstalk Application</p>
 <ul>
-<li>Truy cập vào <strong>Elastic Beanstalk</strong>.</li>
-<li>Chọn <strong>Applications</strong> sau đó chọn Application bạn vừa tạo.</li>
-<li>Chọn <strong>Actions</strong> &gt; <strong>Delete application</strong>.</li>
+<li>Go to <strong>Elastic Beanstalk</strong>.</li>
+<li>Select <strong>Applications</strong> then select Application we have created.</li>
+<li>Select <strong>Actions</strong> &gt; <strong>Delete application</strong>.</li>
 </ul>
 </li>
 <li>
-<p>Xoá S3 Bucket</p>
+<p>Delete S3 Bucket</p>
 <ul>
-<li>Truy cập vào <strong>S3</strong></li>
-<li>Truy cập vào Bucket <strong>elasticbeanstalk-</strong></li>
-<li>Chọn tab <strong>Permissions</strong>, cuộn xuống phần <strong>Bucket Policy</strong>, chọn <strong>Delete</strong>.</li>
-<li><strong>Empty</strong> và <strong>Delete</strong> Bucket <strong>elasticbeanstalk-</strong>.</li>
-<li><strong>Empty</strong> và <strong>Delete</strong> Bucket chứa Artifact ta đã tạo dành cho CodePipeline.</li>
+<li>Go to <strong>S3</strong></li>
+<li>Select <strong>elasticbeanstalk-</strong> bucket.</li>
+<li>Select <strong>Permissions</strong> tab, Scroll down to <strong>Bucket Policy</strong>, select <strong>Delete</strong>.</li>
+<li><strong>Empty</strong> and <strong>Delete</strong> <strong>elasticbeanstalk-</strong> bucket.</li>
+<li><strong>Empty</strong> and <strong>Delete</strong> Bucket created to store Artifacts.</li>
 </ul>
 </li>
 <li>
-<p>Xoá IAM Role</p>
+<p>Delete IAM Role</p>
 <ul>
-<li>Truy cập vào <strong>IAM</strong>.</li>
-<li>Chọn <strong>Roles</strong>.</li>
-<li>Xoá các role ta đã tạo.</li>
+<li>Go to <strong>IAM</strong>.</li>
+<li>Select <strong>Roles</strong>.</li>
+<li>Select Role we have created.</li>
 </ul>
 </li>
 <li>
-<p>Xoá Keypair</p>
+<p>Delete Keypair</p>
 <ul>
-<li>Truy cập vào <strong>EC2</strong>.</li>
-<li>Chọn <strong>Key Pairs</strong>.</li>
-<li>Xoá Keypair ta đã tạo.</li>
+<li>Go to <strong>EC2</strong>.</li>
+<li>Select <strong>Key Pairs</strong>.</li>
+<li>Delete Keypair we have created.</li>
 </ul>
 </li>
 <li>
-<p>Xoá NAT Gateway</p>
+<p>Delete NAT Gateway</p>
 <ul>
-<li>Truy cập vào <strong>VPC</strong>.</li>
-<li>Chọn <strong>NAT Gateways</strong>.</li>
-<li>Xoá NAT Gateway ta đã tạo.</li>
+<li>Go to <strong>VPC</strong>.</li>
+<li>Select <strong>NAT Gateways</strong>.</li>
+<li>Delete NAT Gateway we have created.</li>
 </ul>
 </li>
 <li>
-<p>Xoá Elastic IP</p>
+<p>Release Elastic IP</p>
 <ul>
-<li>Chọn <strong>Elastic IPs</strong> trong <strong>VPC</strong>.</li>
-<li>Chọn IP AWS tạo cho ta trước đó.</li>
-<li>Chọn <strong>Actions</strong> &gt; <strong>Release Elastic IP</strong>.</li>
+<li>Select <strong>Elastic IPs</strong> in <strong>VPC</strong>.</li>
+<li>Select IP we used for the lab.</li>
+<li>Select <strong>Actions</strong> &gt; <strong>Release Elastic IP</strong>.</li>
 </ul>
 </li>
 <li>
-<p>Xoá VPC</p>
+<p>Delete VPC</p>
 <ul>
-<li>Truy cập vào <strong>VPC</strong>.</li>
-<li>Chọn VPC ta đã tạo trước đó.</li>
-<li>Xoá VPC.</li>
+<li>Go to <strong>VPC</strong>.</li>
+<li>Select VPC we have created.</li>
+<li>Delete VPC.</li>
 </ul>
 </li>
 </ol>
@@ -1072,10 +1072,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/3-codepipeline/3.5-testpipeline/" title="Kiểm thử Pipeline"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/3-codepipeline/3.5-testpipeline/" title="Test the Pipeline"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/1-introduction/" title="Giới thiệu" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1085,19 +1085,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1709840783"></script>
-    <script src="/js/perfect-scrollbar.min.js?1709840783"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1709840783"></script>
-    <script src="/js/jquery.sticky.js?1709840783"></script>
-    <script src="/js/featherlight.min.js?1709840783"></script>
-    <script src="/js/highlight.pack.js?1709840783"></script>
+    <script src="/js/clipboard.min.js?1709852926"></script>
+    <script src="/js/perfect-scrollbar.min.js?1709852926"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1709852926"></script>
+    <script src="/js/jquery.sticky.js?1709852926"></script>
+    <script src="/js/featherlight.min.js?1709852926"></script>
+    <script src="/js/highlight.pack.js?1709852926"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1709840783"></script>
-    <script src="/js/learn.js?1709840783"></script>
-    <script src="/js/hugo-learn.js?1709840783"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1709852926"></script>
+    <script src="/js/learn.js?1709852926"></script>
+    <script src="/js/hugo-learn.js?1709852926"></script>
 
-    <link href="/mermaid/mermaid.css?1709840783" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1709840783"></script>
+    <link href="/mermaid/mermaid.css?1709852926" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1709852926"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

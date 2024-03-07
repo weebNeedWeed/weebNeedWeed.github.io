@@ -1,0 +1,127 @@
+[
+{
+	"uri": "/vi/1-introduction/",
+	"title": "Giới thiệu",
+	"tags": [],
+	"description": "",
+	"content": "AWS CodeBuild CodeBuild là một dịch vụ trên AWS hỗ trợ quá trình tích hợp liên tục các thay đổi trong mã nguồn. CodeBuild biên dịch, chạy các unit test để đảm bảo chất lượng mã nguồn cho việc triển khai lên khác dịch vụ khác. Với CodeBuild, ta sẽ không cần lo lắng về việc vận hành, quản lý và mở rộng máy chủ chuyên dụng cho việc build.\nCodeBuild hiện nay hỗ trợ khá nhiều ngôn ngữ như C#, Java, JavaScript, các build tool như Maven, Gradle và các nền tảng như Docker, Android được xây dựng sẵn.\nAWS CodeDeploy CodeDeploy tự động hoá việc triển khai ứng dụng lên các dịch vụ như EC2, Lambda, Fargate và môi trường on-premises với 2 kiểu triển khai chính là In-place deployment và Blue/green deployment.\nAWS CodePipeline CodePipeline là một dịch vụ hỗ trợ chuyên giao liên tục được sử dụng để mô hình hoá, trực quan hoá và tự động hoá các bước để triển khai ứng dụng. Khi kết hợp với CodeBuild, ta sẽ có được mô hình tự động hoá hoàn toàn các bước build-test-release.\nAWS Elastic Beanstalk Elastic Beanstalk là một dịch vụ PaaS(Platform as a service) trên AWS giúp ta dễ dàng hơn trong việc triển khai và quản lý các ứng dụng. Khi developer tạo mới một Environment, Elastic Beanstalk sẽ tự động khởi tạo các tài nguyên khác như EC2, Elastic Load Balancer, Auto Scaling Group,\u0026hellip; để giúp ứng dụng có độ sẵn sàng cao(High Availability) mà không cần developer bận tâm về các vấn đề quản lý tài nguyên chi tiết.\nCác lợi ích khi sử dụng Elastic Beanstalk:\nTriển khai và quản lý ứng dụng một cách tiện lợi mà không cần lo lắng về các vấn đề như hạ tầng, cân bằng tải, mở rộng hệ thống,\u0026hellip; Đa môi trường: Elastic Beanstalk hỗ trợ triển khai nhiều môi trường, do đó ta có thể triển khai ứng dụng lên các môi trường riêng biệt như Development, Production,\u0026hellip; Hỗ trợ nhiều ngôn ngữ, nền tảng cùng với đó là khả năng tuỳ chỉnh, mở rộng cao. Tiết kiệm chi phí: Bạn chỉ phải chi trả cho những dịch vụ Elastic Beanstalk đã tạo như EC2 hay Elastic Load Balancer. Trong lab này ta sẽ cùng nhau thực hành triển khai các dịch vụ trên với mô hình kiến trúc dưới đây:\nVới mô hình kiến trúc trên, ta có workflow như sau:\nKhi Developer commit các thay đổi và push lên remote repository trên github, CodePipeline sẽ watch remote repository và pull source code về sau đó upload vào S3 Bucket. Bước này được gọi là Source Stage và source code ở bước này được gọi là Source Artifact. Ở Build Stage CodeBuild sẽ lấy source code đã được upload và tiến hành build với các cấu hình ta định nghĩa trong file buildspec.yml. Sau khi build thành công CodeBuild sẽ upload Build Artifact vào S3 Bucket. Sau cùng, ở Deploy Stage, Build Artifact sẽ được upload vào Elastic Beanstalk Environment. Elastic Beanstalk sẽ tự động cập nhật phiên bản ứng dụng trong EC2 Instance và thay đổi các cấu hình bên trong Environment. Ở phía người dùng, sau khi hệ thống được triển khai thành công, có thể truy cập vào website thông qua DNS được Route53 cung cấp. "
+},
+{
+	"uri": "/vi/3-codepipeline/3.1-createbucket/",
+	"title": "Tạo S3 Bucket",
+	"tags": [],
+	"description": "",
+	"content": "Tạo mới một Bucket Tìm và truy cập S3 trên thanh tìm kiếm. Chọn Buckets, tiếp đó chọn Create bucket. Chọn AWS Region là Region bạn đang thực hiện lab. Ở phần Bucket name, nhập một tên hợp lệ. Chọn Create bucket. Click vào Bucket bạn vừa tạo. Chọn tab Permissions. Ở phần Block public access chọn Edit. Bỏ chọn tất cả các Checkbox. Chọn Save change. Chọn Edit bucket policy. Nhập Policy sau: { \u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;, \u0026#34;Statement\u0026#34;: [ { \u0026#34;Sid\u0026#34;: \u0026#34;Statement1\u0026#34;, \u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;, \u0026#34;Principal\u0026#34;: { \u0026#34;AWS\u0026#34;: \u0026#34;*\u0026#34; }, \u0026#34;Action\u0026#34;: [ \u0026#34;s3:List*\u0026#34;, \u0026#34;s3:Get*\u0026#34;, \u0026#34;s3:Put*\u0026#34; ], \u0026#34;Resource\u0026#34;: [ \u0026#34;arn:aws:s3:::fcj-aws-eb-lab\u0026#34;, \u0026#34;arn:aws:s3:::fcj-aws-eb-lab/*\u0026#34; ] } ] } Ở phần Principal, ta cho phép toàn bộ Service trong AWS được thực hiện các Action bên dưới đối với Bucket với \u0026quot;AWS\u0026quot;: \u0026quot;*\u0026quot;. Cho phép thực hiện các Action bắt đầu với List, Get và Put đối với Bucket vừa tạo arn:aws:s3:::fcj-aws-eb-lab và các Object bên trong nó arn:aws:s3:::fcj-aws-eb-lab/*. Chọn Save change. "
+},
+{
+	"uri": "/vi/2-elasticbeanstalk/2.1-createvpc/",
+	"title": "Tạo VPC",
+	"tags": [],
+	"description": "",
+	"content": "Tạo mới một VPC Trước khi bắt đầu lab, bạn nên chọn một Region của AWS để triển khai các dịch vụ. Các tài nguyên trong lab này sẽ được tạo trong Region Singapore (ap-southeast-1).\nĐăng nhập vào bảng điều khiển, tìm VPC, chọn VPC. Ở mục Resource to create, chọn VPC and more Chọn Auto-generate và nhập fcj-aws cho mục Name tag auto-generation. Nhập 10.10.0.0/16 cho mục IPv4 CIDR Block. Chọn 2 AZ, 2 Public Subnet và 2 Private Subnet. Ở mục NAT Gateways, chọn In 1 AZ. Chọn None cho VPC Endpoints. Chọn Create VPC. Sau khi VPC được khởi tạo thành công, chọn View VPC để xem VPC. "
+},
+{
+	"uri": "/vi/",
+	"title": "Triển khai ứng dụng với CodePipeline và Elastic Beanstalk",
+	"tags": [],
+	"description": "",
+	"content": "Triển khai CI/CD cho ứng dụng .NET Core với Github, AWS CodePipeline và AWS Elastic Beanstalk Tổng quan Trong lab này, ta sẽ cùng nhau tìm hiểu những khái niệm cơ bản những dịch vụ cốt lõi về CI/CD của AWS là CodeBuild, CodeDeploy và CodePipeline; một dịch vụ khác giúp triển khai ứng dụng một cách nhanh chóng là Elastic Beanstalk. Đồng thời ta cũng sẽ thực hành sử dụng các dịch vụ trên với một ứng dụng API mẫu.\nNội dung Giới thiệu Triển khai Elastic Beanstalk Environment Triển khai CodePipeline Dọn dẹp tài nguyên "
+},
+{
+	"uri": "/vi/2-elasticbeanstalk/2.2-enablepublicip/",
+	"title": "Bật Public IP cho Public Subnet",
+	"tags": [],
+	"description": "",
+	"content": "Bật Public IP cho Public Subnet Truy cập bảng điều khiển của VPC, chọn Subnets, chọn subnet fcj-aws-subnet-public1-*. Chọn Actions sau đó chọn Edit subnet settings. Chọn Enable auto-assign public IPv4 address, sau đó chọn Save. Lặp lại các bước trên với subnet fcj-aws-subnet-public2-*. "
+},
+{
+	"uri": "/vi/3-codepipeline/3.2-connecttogithub/",
+	"title": "Kết nối Github với AWS",
+	"tags": [],
+	"description": "",
+	"content": "Tạo kết nối đến Github Tìm và chọn CodePipeline trong phần tìm kiếm. Chọn Connection trong mục Settings và chọn Create connection. Chọn Provider là Github sau đó nhập Connection name. Chọn Connect to Github. Chọn Install a new app và làm theo các bước của Github để tải app cho tài khoản. Sau khi cài đặt thành công, chọn Connect. "
+},
+{
+	"uri": "/vi/2-elasticbeanstalk/",
+	"title": "Triển khai Elastic Beanstalk Environment",
+	"tags": [],
+	"description": "",
+	"content": "Các khái niệm cơ bản trong Elastic Beanstalk Application: Một Application là một tập hợp luận lý các thành phần bao gôm các Environment, các Version và Environment Configuration. Version: mỗi Application có nhiều Version, ví dụ: ta có một Application có Version v1 sử dụng MySQL, Version v2 sử dụng PostgreSQL. Environment Tier: Khi khởi tạo một Environment, ta sẽ được chọn 1 trong 2 tier: Web server: Dành cho các Application thông thường, lắng nghe các HTTP Request và trả về kết quả. Worker: Dành cho các Application chuyên lắng nghe và xử lý các AWS Simple Queue Service message. Environment Configuration: Các tham số cài đặt của một Environment. Trong phần này, ta sẽ cùng tìm hiểu và triển khai một High Availability Environment đơn giản với sample code được AWS cung cấp sẵn.\nNội dung Tạo VPC Bật Public IP cho Public Subnet Tạo EC2 Keypair Tạo EC2 Instance Profile Triển khai Environment Kiểm tra Environment "
+},
+{
+	"uri": "/vi/2-elasticbeanstalk/2.3-createkeypair/",
+	"title": "Tạo EC2 Keypair",
+	"tags": [],
+	"description": "",
+	"content": "Tạo EC2 Keypair Ở thanh tìm kiếm, nhập EC2, chọn EC2. Cuộn xuống phần Network \u0026amp; Security, chọn Key Pairs. Chọn Create key pair. Nhập Name là aws-keypair, chọn Private key file format là .pem. Sau đó chọn Create key pair. Tạo key pair thành công. "
+},
+{
+	"uri": "/vi/3-codepipeline/3.3-createpipeline/",
+	"title": "Tạo Pipeline",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Pipeline với CodePipeline Tìm và chọn CodePipeline trên thanh tìm kiếm. Chọn Pipelines \u0026gt; Create pipeline. Với Pipeline name, nhập fcj-aws-pipeline. Pipeline type chọn V2. Execution mode chọn Superseded. Service role chọn New service role, nhập Role name và chọn Allow AWS CodePipeline to create a service role so it can be used with this new pipeline. Trong Advanced settings, chọn Custom location sau đó chọn Bucket mà ta chuẩn bị trước đó. Đối với Source provider ta chọn Github(Version 2). Ta chọn Connection đã tạo trước đó. Đồng thời chọn Repository trên Github. Chọn nhánh master và Output artifact format là CodePipeline default. Chọn Trigger là No filter, chọn Next. Chọn Build provider là AWS CodeBuild, tiếp theo chọn Create project. Project name nhập fcj-aws-proj. Chọn New service role sau đó nhập Role name. Chọn Use a buildspec file. Chọn Cloud watch logs, nhập Group name và Stream name prefix. Chọn Continue to CodePipeline. Chọn Build type là Single build. Chọn Next. Chọn Deploy provider là AWS Elastic Beanstalk. Chọn Application name và Environment name ta đã tạo trước đó. Xem lại cấu hình và chọn Create pipeline. Dù ta đã tạo thành công Pipeline nhưng Pipeline của ta vẫn chưa thể chạy được. Đó là vì Service role CodePipeline tự động tạo không có quyền truy cập đến Elastic Beanstalk nên ta sẽ phải cấp quyền cho Service role.\n"
+},
+{
+	"uri": "/vi/3-codepipeline/",
+	"title": "Triển khai CodePipeline",
+	"tags": [],
+	"description": "",
+	"content": "Triển khai CI/CD cho ứng dụng với CodePipeline Trong phần này ta sẽ cùng nhau triển khai CI/CD cho ứng dụng .NET 6 được xây dựng sẵn trong Repository này. Ứng dụng có duy nhất một endpoint là \u0026ldquo;/\u0026rdquo; trả về dòng chữ Hello world khi được gọi.\nĐể thực hiện các nội dung trong phần này, bạn nên clone Repository này và push lên một Repository khác thuộc tài khoản Github của chính bạn.\nNội dung Tạo S3 Bucket Kết nối Github với AWS Tạo Pipeline Thêm Policy cho Service Role Kiểm thử Pipeline "
+},
+{
+	"uri": "/vi/3-codepipeline/3.4-addrolepolicy/",
+	"title": "Add policy to the Service Role",
+	"tags": [],
+	"description": "",
+	"content": "Add policy to the Service Role Find and select IAM. Chọn Roles sau đó chọn Service Role CodePipeline tạo ra. Chọn Add permissions \u0026gt; Attach policies. Tìm và chọn Policy AdministratorAccess-AWSElasticBeanstalk. Chọn Add permissions. "
+},
+{
+	"uri": "/vi/4-cleanup/",
+	"title": "Dọn dẹp tài nguyên",
+	"tags": [],
+	"description": "",
+	"content": "Dọn dẹp tài nguyên Xoá Pipeline\nTruy cập vào trang quản trị CodePipeline. Chọn Pipeline bạn vừa tạo. Chọn Delete pipeline. Xoá CodeBuild Project.\nTruy cập vào trang quản trị CodeBuild. Chọn Project bạn đã tạo. Chọn Actions \u0026gt; Delete. Xoá kết nối Github\nChọn Settings \u0026gt; Connections. Chọn Connection bạn vừa tạo. Chọn Delete. Xoá Elastic Beanstalk Application\nTruy cập vào Elastic Beanstalk. Chọn Applications sau đó chọn Application bạn vừa tạo. Chọn Actions \u0026gt; Delete application. Xoá S3 Bucket\nTruy cập vào S3 Truy cập vào Bucket elasticbeanstalk- Chọn tab Permissions, cuộn xuống phần Bucket Policy, chọn Delete. Empty và Delete Bucket elasticbeanstalk-. Empty và Delete Bucket chứa Artifact ta đã tạo dành cho CodePipeline. Xoá IAM Role\nTruy cập vào IAM. Chọn Roles. Xoá các role ta đã tạo. Xoá Keypair\nTruy cập vào EC2. Chọn Key Pairs. Xoá Keypair ta đã tạo. Xoá NAT Gateway\nTruy cập vào VPC. Chọn NAT Gateways. Xoá NAT Gateway ta đã tạo. Xoá Elastic IP\nChọn Elastic IPs trong VPC. Chọn IP AWS tạo cho ta trước đó. Chọn Actions \u0026gt; Release Elastic IP. Xoá VPC\nTruy cập vào VPC. Chọn VPC ta đã tạo trước đó. Xoá VPC. "
+},
+{
+	"uri": "/vi/2-elasticbeanstalk/2.4-instanceprofile/",
+	"title": "Tạo EC2 Instance Profile",
+	"tags": [],
+	"description": "",
+	"content": "Tạo EC2 Instance Profile Tìm IAM, chọn IAM. Chọn Roles sau đó chọn Create role. Chọn AWS Service ở phần Trusted entity type. Cuộn xuống và chọn EC2, sau đó click Next. Tìm và chọn policy AWSElasticBeanstalkWebTier. Chọn Next. Nhập Role name là fcj-aws-ec2-instance-profile. Chọn Create role. "
+},
+{
+	"uri": "/vi/3-codepipeline/3.5-testpipeline/",
+	"title": "Kiểm thử Pipeline",
+	"tags": [],
+	"description": "",
+	"content": "Kiểm thử Pipeline Quay về giao diện Pipeline khi nãy ta vừa tạo, kiểm tra xem các Stage đã chạy thành công hay chưa. Truy cập vào Elastic Beanstalk, kiểm tra các Event diễn ra khi Elastic Beanstalk vận hành để cập nhật phiên bản ứng dụng. Truy cập vào DNS xem kết quả. Giờ bạn hãy thử tạo một commit mới với nội dung là sửa response của endpoint / (Ví dụ sửa \u0026ldquo;Hello world\u0026rdquo; \u0026gt; \u0026ldquo;Hello world 123\u0026rdquo;) để quan sát cách Pipeline hoạt động nhé.\n"
+},
+{
+	"uri": "/vi/2-elasticbeanstalk/2.5-createenv/",
+	"title": "Triển khai Environment",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Application Tìm Elastic Beanstalk trên thanh tìm kiếm và chọn Elastic Beanstalk. Chọn Applications sau đó chọn Create application. Nhập Application name là fcj-aws-application. Chọn Create. Tạo Environment Truy cập vào trang quản trị của Application fcj-aws-application vừa tạo, chọn Create new application. Ở phần Environment tier, ta chọn Web server environment. Nhập fcj-aws-application-prod-env cho Environment name và Domain nhằm mục đích đánh dấu đây là Environment dành cho Production(prod). Chọn Check availability, nếu thông báo \u0026hellip;is available hiện lên thì tên bạn đặt là hợp lệ, nếu không bạn có thể đổi tên khác. Ở phần Platform ta chọn Platform type là Managed platform và chọn .NET Core on Linux. Chọn Sample application cho Application code để sử dụng sample app AWS cung cấp sẵn. Ở phần Presets, chọn High availability để xây dựng Environment có độ sẵn sàng cao. Chọn Next. Chọn Create and use new service role để AWS tự động tạo một service role mới. Chọn aws-keypair và fcj-aws-ec2-instance-profile đã tạo trong bước trước. Chọn Next. Chọn fcj-aws-vpc. Chọn 2 Private Subnet cho Instance Subnets. Cuộn xuống và chọn Next. Chọn Monitoring interval là 1 minute, cứ mỗi 1 phút thì sẽ cập nhật số liệu 1 lần. Phần EC2 security groups ta có thể bỏ trống vì Elastic Beanstalk sẽ tự động tạo mới một security group và gán cho EC2 Instance. Chọn Load balanced cho Environment type và chọn số lượng instance tối thiểu/tối đa, ta có thể để mặc định tối thiểu là 1 và tối đa là 4. Instance types, chọn t2.micro. Ở phần Scaling triggers ta có thể giữ các giá trị mặc định. AWS Elastic Beanstalk sẽ tự động tăng giảm số lượng instance khi lưu lượng mạng đi của mỗi instance lớn hơn 6MB và bé hơn 2MB. Ở phần Load balancer subnets, chọn 2 Public Subnet. Ở bước này mặc định AWS sẽ chọn sẵn 2 Private Subnet, nếu ta để mặc định thì Load balancer sẽ không thể nhận traffic.\nChọn Application load balancer và Dedicated cho Load balancer type. Chọn Next. Ta chọn Enhanced cho Health reporting system. Chọn Activated cho Log streaming để ta có thể xem log trên CloudWatch. Ta có thể nhập email để Elastic Beanstalk thông báo các sự kiện quan trọng khi Environment vận hành. Deployment policy chọn Rolling và giữ các giá trị khác mặc định. Deployment policy bao gồm các lựa chọn sau:\nAll at once: Đồng thời triển khai phiên bản application mới trên toàn bộ EC2 Instance, User sẽ không thể truy cập vào website trong một khoảng thời gian ngắn. Rolling: Triển khai theo từng batch. Ví dụ: ta có 10 instance và batch size là 2 thì ta sẽ có mỗi lượt 2 instance sẽ được triển khai. Rolling with additional batch: Như Rolling nhưng ở giai đoạn khởi tạo sẽ tự động khởi tạo thêm một số lượng instance nhằm đảm bảo hệ thống đạt được hiệu suất như trước khi triển khai phiên bản mới. Immutable: Triển khai trên một nhóm các instance hoàn toàn khác với các instance đang vận hành sau đó sẽ thay từ từ các instance mới vào các instance cũ. Traffic splitting: Triển khai trên một nhóm các instance hoàn toàn khác với các instance đang vận hành, đồng thời chuyển hướng một lượng traffic từ các instance cũ sang các instance mới. Chọn Activated cho Instance log streaming. Chọn Next. Review lại cấu hình sau đó chọn Submit. Chờ khoảng 10 phút để Environment khởi tạo thành công. "
+},
+{
+	"uri": "/vi/2-elasticbeanstalk/2.6-testenv/",
+	"title": "Kiểm tra Environment",
+	"tags": [],
+	"description": "",
+	"content": "Kiểm tra Environment Sau khi Environment được khởi tạo thành công sẽ có Health là Ok. Ta có thể click vào DNS của application để xem kết quả. Chọn tab Events để xem các tài nguyên đã và đang khởi tạo. Chọn tab Health để kiểm tra trạng thái của các Instance. Tiếp đó chọn Logs và chọn Request logs \u0026gt; Full để fetch các log file của EC2 Instance nhằm mục đích troubleshoot lỗi nếu gặp phải. "
+},
+{
+	"uri": "/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

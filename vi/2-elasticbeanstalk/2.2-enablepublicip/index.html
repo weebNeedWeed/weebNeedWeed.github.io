@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="js csstransforms3d">
+<html lang="en" class="js csstransforms3d">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Bật Public IP cho Public Subnet :: Triển khai ứng dụng với CodePipeline và Elastic Beanstalk</title>
+    <title>Enable auto-assign public IPv4 address :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1709840783" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1709840783" rel="stylesheet">
-    <link href="/css/hybrid.css?1709840783" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1709840783" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1709840783" rel="stylesheet">
-    <link href="/css/auto-complete.css?1709840783" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1709840783" rel="stylesheet">
-    <link href="/css/theme.css?1709840783" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1709840783" rel="stylesheet">
+    <link href="/css/nucleus.css?1709852926" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1709852926" rel="stylesheet">
+    <link href="/css/hybrid.css?1709852926" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1709852926" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1709852926" rel="stylesheet">
+    <link href="/css/auto-complete.css?1709852926" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1709852926" rel="stylesheet">
+    <link href="/css/theme.css?1709852926" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1709852926" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1709840783" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1709852926" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1709840783"></script>
+    <script src="/js/jquery-3.3.1.min.js?1709852926"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/2-elasticbeanstalk/2.2-enablepublicip/">
+  <body class="" data-url="/2-elasticbeanstalk/2.2-enablepublicip/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1709840783"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1709840783"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1709852926"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1709852926"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1709840783"></script>
+<script type="text/javascript" src="/js/search.js?1709852926"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduction/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/1-introduction/" title="Introduction" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-introduction/">
-           <b> 1. </b> Giới thiệu
+      <a href="/1-introduction/">
+           <b> 1. </b> Introduction
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/" title="Triển khai Elastic Beanstalk Environment" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/" title="Create Elastic Beanstalk Environment" class="dd-item 
         parent
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/">
-           <b> 2. </b> Triển khai Elastic Beanstalk Environment
+      <a href="/2-elasticbeanstalk/">
+           <b> 2. </b> Create Elastic Beanstalk Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.1-createvpc/" title="Tạo VPC" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.1-createvpc/" title="Create a VPC" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.1-createvpc/">
-           <b> 2.1 </b> Tạo VPC
+      <a href="/2-elasticbeanstalk/2.1-createvpc/">
+           <b> 2.1 </b> Create a VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.2-enablepublicip/" title="Bật Public IP cho Public Subnet" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.2-enablepublicip/" title="Enable auto-assign public IPv4 address" class="dd-item 
         
         active
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.2-enablepublicip/">
-           <b> 2.2 </b> Bật Public IP cho Public Subnet
+      <a href="/2-elasticbeanstalk/2.2-enablepublicip/">
+           <b> 2.2 </b> Enable auto-assign public IPv4 address
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +195,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.3-createkeypair/" title="Tạo EC2 Keypair" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.3-createkeypair/" title="Create EC2 Keypair" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.3-createkeypair/">
-           <b> 2.3 </b> Tạo EC2 Keypair
+      <a href="/2-elasticbeanstalk/2.3-createkeypair/">
+           <b> 2.3 </b> Create EC2 Keypair
           
             <i class="fas fa-check read-icon"></i>
           
@@ -223,13 +223,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.4-instanceprofile/" title="Tạo EC2 Instance Profile" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.4-instanceprofile/" title="Create EC2 Instance Profile" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.4-instanceprofile/">
-           <b> 2.4 </b> Tạo EC2 Instance Profile
+      <a href="/2-elasticbeanstalk/2.4-instanceprofile/">
+           <b> 2.4 </b> Create EC2 Instance Profile
           
             <i class="fas fa-check read-icon"></i>
           
@@ -251,13 +251,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.5-createenv/" title="Triển khai Environment" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.5-createenv/" title="Deploy the Environment" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.5-createenv/">
-           <b> 2.5 </b> Triển khai Environment
+      <a href="/2-elasticbeanstalk/2.5-createenv/">
+           <b> 2.5 </b> Deploy the Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -279,13 +279,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.6-testenv/" title="Kiểm tra Environment" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.6-testenv/" title="Test the Environment" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.6-testenv/">
-           <b> 2.6 </b> Kiểm tra Environment
+      <a href="/2-elasticbeanstalk/2.6-testenv/">
+           <b> 2.6 </b> Test the Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -314,13 +314,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/" title="Triển khai CodePipeline" class="dd-item 
+    <li data-nav-id="/3-codepipeline/" title="Deploy CodePipeline" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/">
-           <b> 3. </b> Triển khai CodePipeline
+      <a href="/3-codepipeline/">
+           <b> 3. </b> Deploy CodePipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -345,13 +345,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.1-createbucket/" title="Tạo S3 Bucket" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.1-createbucket/" title="Create a new S3 Bucket" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.1-createbucket/">
-           <b> 3.1 </b> Tạo S3 Bucket
+      <a href="/3-codepipeline/3.1-createbucket/">
+           <b> 3.1 </b> Create a new S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
           
@@ -373,13 +373,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.2-connecttogithub/" title="Kết nối Github với AWS" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.2-connecttogithub/" title="Connect AWS to Github" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.2-connecttogithub/">
-           <b> 3.2 </b> Kết nối Github với AWS
+      <a href="/3-codepipeline/3.2-connecttogithub/">
+           <b> 3.2 </b> Connect AWS to Github
           
             <i class="fas fa-check read-icon"></i>
           
@@ -401,13 +401,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.3-createpipeline/" title="Tạo Pipeline" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.3-createpipeline/" title="Create a new Pipeline" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.3-createpipeline/">
-           <b> 3.3 </b> Tạo Pipeline
+      <a href="/3-codepipeline/3.3-createpipeline/">
+           <b> 3.3 </b> Create a new Pipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -429,13 +429,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.4-addrolepolicy/" title="Add policy to the Service Role" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.4-addrolepolicy/" title="Add Policy for Service Role" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.4-addrolepolicy/">
-           <b> 3.4 </b> Add policy to the Service Role
+      <a href="/3-codepipeline/3.4-addrolepolicy/">
+           <b> 3.4 </b> Add Policy for Service Role
           
             <i class="fas fa-check read-icon"></i>
           
@@ -457,13 +457,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.5-testpipeline/" title="Kiểm thử Pipeline" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.5-testpipeline/" title="Test the Pipeline" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.5-testpipeline/">
-           <b> 3.5 </b> Kiểm thử Pipeline
+      <a href="/3-codepipeline/3.5-testpipeline/">
+           <b> 3.5 </b> Test the Pipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -492,13 +492,13 @@
  
   
     
-    <li data-nav-id="/vi/4-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
+    <li data-nav-id="/4-cleanup/" title="Clean up resources" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-cleanup/">
-           <b> 4. </b> Dọn dẹp tài nguyên
+      <a href="/4-cleanup/">
+           <b> 4. </b> Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -520,11 +520,11 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+                  <a class="padding" href="https://aws.amazon.com/blogs"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
               </li>
           
               <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a>
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
               </li>
           
         </ul>
@@ -549,7 +549,7 @@
                   
                     
                     
-                      <option id="en" value="/2-elasticbeanstalk/2.2-enablepublicip/">English</option>
+                      <option id="en" value="/2-elasticbeanstalk/2.2-enablepublicip/" selected>English</option>
                     
                   
               
@@ -563,7 +563,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-elasticbeanstalk/2.2-enablepublicip/" selected>Tiếng Việt</option>
+                      <option id="vi" value="/vi/2-elasticbeanstalk/2.2-enablepublicip/">Tiếng Việt</option>
                     
                   
               
@@ -656,7 +656,7 @@
             
           
           
-            <a href='/vi/'>Triển khai ứng dụng với CodePipeline và Elastic Beanstalk</a> > <a href='/vi/2-elasticbeanstalk/'>Triển khai Elastic Beanstalk Environment</a> > Bật Public IP cho Public Subnet
+            <a href='/'>Implement pipeline for Elastic Beanstalk application</a> > <a href='/2-elasticbeanstalk/'>Create Elastic Beanstalk Environment</a> > Enable auto-assign public IPv4 address
           
         
           
@@ -693,7 +693,7 @@
           
             <h1>
               
-              Bật Public IP cho Public Subnet
+              Enable auto-assign public IPv4 address
             </h1>
           
 
@@ -701,21 +701,21 @@
 
 
 
-	<h4 id="bật-public-ip-cho-public-subnet">Bật Public IP cho Public Subnet</h4>
+	<h4 id="enable-auto-assign-public-ipv4-address">Enable auto-assign public IPv4 address</h4>
 <ol>
-<li>Truy cập bảng điều khiển của <strong>VPC</strong>, chọn <strong>Subnets</strong>, chọn subnet <code>fcj-aws-subnet-public1-*</code>.</li>
+<li>Go to <strong>VPC</strong>, select <strong>Subnets</strong>, choose subnet <code>fcj-aws-subnet-public1-*</code>.</li>
 </ol>
 <p><img alt="0001" src="/images/2-ElasticBeanstalk/2.2-EnableIP/0001.svg"></p>
 <ol start="2">
-<li>Chọn <strong>Actions</strong> sau đó chọn <strong>Edit subnet settings</strong>.</li>
+<li>Click <strong>Actions</strong> then click <strong>Edit subnet settings</strong>.</li>
 </ol>
 <p><img alt="0002" src="/images/2-ElasticBeanstalk/2.2-EnableIP/0002.svg"></p>
 <ol start="3">
-<li>Chọn <strong>Enable auto-assign public IPv4 address</strong>, sau đó chọn <strong>Save</strong>.</li>
+<li>Check <strong>Enable auto-assign public IPv4 address</strong>, then click <strong>Save</strong>.</li>
 </ol>
 <p><img alt="0003" src="/images/2-ElasticBeanstalk/2.2-EnableIP/0003.svg"></p>
 <ol start="4">
-<li>Lặp lại các bước trên với subnet <code>fcj-aws-subnet-public2-*</code>.</li>
+<li>Repeat those steps with subnet <code>fcj-aws-subnet-public2-*</code>.</li>
 </ol>
 
 
@@ -1016,10 +1016,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/2-elasticbeanstalk/2.1-createvpc/" title="Tạo VPC"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/2-elasticbeanstalk/2.1-createvpc/" title="Create a VPC"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/2-elasticbeanstalk/2.3-createkeypair/" title="Tạo EC2 Keypair" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2-elasticbeanstalk/2.3-createkeypair/" title="Create EC2 Keypair" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1029,19 +1029,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1709840783"></script>
-    <script src="/js/perfect-scrollbar.min.js?1709840783"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1709840783"></script>
-    <script src="/js/jquery.sticky.js?1709840783"></script>
-    <script src="/js/featherlight.min.js?1709840783"></script>
-    <script src="/js/highlight.pack.js?1709840783"></script>
+    <script src="/js/clipboard.min.js?1709852926"></script>
+    <script src="/js/perfect-scrollbar.min.js?1709852926"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1709852926"></script>
+    <script src="/js/jquery.sticky.js?1709852926"></script>
+    <script src="/js/featherlight.min.js?1709852926"></script>
+    <script src="/js/highlight.pack.js?1709852926"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1709840783"></script>
-    <script src="/js/learn.js?1709840783"></script>
-    <script src="/js/hugo-learn.js?1709840783"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1709852926"></script>
+    <script src="/js/learn.js?1709852926"></script>
+    <script src="/js/hugo-learn.js?1709852926"></script>
 
-    <link href="/mermaid/mermaid.css?1709840783" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1709840783"></script>
+    <link href="/mermaid/mermaid.css?1709852926" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1709852926"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

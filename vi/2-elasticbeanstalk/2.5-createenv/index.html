@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="js csstransforms3d">
+<html lang="en" class="js csstransforms3d">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Triển khai Environment :: Triển khai ứng dụng với CodePipeline và Elastic Beanstalk</title>
+    <title>Deploy the Environment :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1709840783" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1709840783" rel="stylesheet">
-    <link href="/css/hybrid.css?1709840783" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1709840783" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1709840783" rel="stylesheet">
-    <link href="/css/auto-complete.css?1709840783" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1709840783" rel="stylesheet">
-    <link href="/css/theme.css?1709840783" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1709840783" rel="stylesheet">
+    <link href="/css/nucleus.css?1709852926" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1709852926" rel="stylesheet">
+    <link href="/css/hybrid.css?1709852926" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1709852926" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1709852926" rel="stylesheet">
+    <link href="/css/auto-complete.css?1709852926" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1709852926" rel="stylesheet">
+    <link href="/css/theme.css?1709852926" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1709852926" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1709840783" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1709852926" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1709840783"></script>
+    <script src="/js/jquery-3.3.1.min.js?1709852926"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/2-elasticbeanstalk/2.5-createenv/">
+  <body class="" data-url="/2-elasticbeanstalk/2.5-createenv/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1709840783"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1709840783"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1709852926"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1709852926"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1709840783"></script>
+<script type="text/javascript" src="/js/search.js?1709852926"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduction/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/1-introduction/" title="Introduction" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-introduction/">
-           <b> 1. </b> Giới thiệu
+      <a href="/1-introduction/">
+           <b> 1. </b> Introduction
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/" title="Triển khai Elastic Beanstalk Environment" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/" title="Create Elastic Beanstalk Environment" class="dd-item 
         parent
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/">
-           <b> 2. </b> Triển khai Elastic Beanstalk Environment
+      <a href="/2-elasticbeanstalk/">
+           <b> 2. </b> Create Elastic Beanstalk Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.1-createvpc/" title="Tạo VPC" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.1-createvpc/" title="Create a VPC" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.1-createvpc/">
-           <b> 2.1 </b> Tạo VPC
+      <a href="/2-elasticbeanstalk/2.1-createvpc/">
+           <b> 2.1 </b> Create a VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.2-enablepublicip/" title="Bật Public IP cho Public Subnet" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.2-enablepublicip/" title="Enable auto-assign public IPv4 address" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.2-enablepublicip/">
-           <b> 2.2 </b> Bật Public IP cho Public Subnet
+      <a href="/2-elasticbeanstalk/2.2-enablepublicip/">
+           <b> 2.2 </b> Enable auto-assign public IPv4 address
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +195,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.3-createkeypair/" title="Tạo EC2 Keypair" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.3-createkeypair/" title="Create EC2 Keypair" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.3-createkeypair/">
-           <b> 2.3 </b> Tạo EC2 Keypair
+      <a href="/2-elasticbeanstalk/2.3-createkeypair/">
+           <b> 2.3 </b> Create EC2 Keypair
           
             <i class="fas fa-check read-icon"></i>
           
@@ -223,13 +223,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.4-instanceprofile/" title="Tạo EC2 Instance Profile" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.4-instanceprofile/" title="Create EC2 Instance Profile" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.4-instanceprofile/">
-           <b> 2.4 </b> Tạo EC2 Instance Profile
+      <a href="/2-elasticbeanstalk/2.4-instanceprofile/">
+           <b> 2.4 </b> Create EC2 Instance Profile
           
             <i class="fas fa-check read-icon"></i>
           
@@ -251,13 +251,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.5-createenv/" title="Triển khai Environment" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.5-createenv/" title="Deploy the Environment" class="dd-item 
         
         active
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.5-createenv/">
-           <b> 2.5 </b> Triển khai Environment
+      <a href="/2-elasticbeanstalk/2.5-createenv/">
+           <b> 2.5 </b> Deploy the Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -279,13 +279,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.6-testenv/" title="Kiểm tra Environment" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.6-testenv/" title="Test the Environment" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.6-testenv/">
-           <b> 2.6 </b> Kiểm tra Environment
+      <a href="/2-elasticbeanstalk/2.6-testenv/">
+           <b> 2.6 </b> Test the Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -314,13 +314,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/" title="Triển khai CodePipeline" class="dd-item 
+    <li data-nav-id="/3-codepipeline/" title="Deploy CodePipeline" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/">
-           <b> 3. </b> Triển khai CodePipeline
+      <a href="/3-codepipeline/">
+           <b> 3. </b> Deploy CodePipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -345,13 +345,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.1-createbucket/" title="Tạo S3 Bucket" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.1-createbucket/" title="Create a new S3 Bucket" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.1-createbucket/">
-           <b> 3.1 </b> Tạo S3 Bucket
+      <a href="/3-codepipeline/3.1-createbucket/">
+           <b> 3.1 </b> Create a new S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
           
@@ -373,13 +373,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.2-connecttogithub/" title="Kết nối Github với AWS" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.2-connecttogithub/" title="Connect AWS to Github" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.2-connecttogithub/">
-           <b> 3.2 </b> Kết nối Github với AWS
+      <a href="/3-codepipeline/3.2-connecttogithub/">
+           <b> 3.2 </b> Connect AWS to Github
           
             <i class="fas fa-check read-icon"></i>
           
@@ -401,13 +401,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.3-createpipeline/" title="Tạo Pipeline" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.3-createpipeline/" title="Create a new Pipeline" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.3-createpipeline/">
-           <b> 3.3 </b> Tạo Pipeline
+      <a href="/3-codepipeline/3.3-createpipeline/">
+           <b> 3.3 </b> Create a new Pipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -429,13 +429,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.4-addrolepolicy/" title="Add policy to the Service Role" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.4-addrolepolicy/" title="Add Policy for Service Role" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.4-addrolepolicy/">
-           <b> 3.4 </b> Add policy to the Service Role
+      <a href="/3-codepipeline/3.4-addrolepolicy/">
+           <b> 3.4 </b> Add Policy for Service Role
           
             <i class="fas fa-check read-icon"></i>
           
@@ -457,13 +457,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.5-testpipeline/" title="Kiểm thử Pipeline" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.5-testpipeline/" title="Test the Pipeline" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.5-testpipeline/">
-           <b> 3.5 </b> Kiểm thử Pipeline
+      <a href="/3-codepipeline/3.5-testpipeline/">
+           <b> 3.5 </b> Test the Pipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -492,13 +492,13 @@
  
   
     
-    <li data-nav-id="/vi/4-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
+    <li data-nav-id="/4-cleanup/" title="Clean up resources" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-cleanup/">
-           <b> 4. </b> Dọn dẹp tài nguyên
+      <a href="/4-cleanup/">
+           <b> 4. </b> Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -520,11 +520,11 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+                  <a class="padding" href="https://aws.amazon.com/blogs"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
               </li>
           
               <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a>
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
               </li>
           
         </ul>
@@ -549,7 +549,7 @@
                   
                     
                     
-                      <option id="en" value="/2-elasticbeanstalk/2.5-createenv/">English</option>
+                      <option id="en" value="/2-elasticbeanstalk/2.5-createenv/" selected>English</option>
                     
                   
               
@@ -563,7 +563,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-elasticbeanstalk/2.5-createenv/" selected>Tiếng Việt</option>
+                      <option id="vi" value="/vi/2-elasticbeanstalk/2.5-createenv/">Tiếng Việt</option>
                     
                   
               
@@ -656,7 +656,7 @@
             
           
           
-            <a href='/vi/'>Triển khai ứng dụng với CodePipeline và Elastic Beanstalk</a> > <a href='/vi/2-elasticbeanstalk/'>Triển khai Elastic Beanstalk Environment</a> > Triển khai Environment
+            <a href='/'>Implement pipeline for Elastic Beanstalk application</a> > <a href='/2-elasticbeanstalk/'>Create Elastic Beanstalk Environment</a> > Deploy the Environment
           
         
           
@@ -693,7 +693,7 @@
           
             <h1>
               
-              Triển khai Environment
+              Deploy the Environment
             </h1>
           
 
@@ -701,145 +701,140 @@
 
 
 
-	<h4 id="tạo-application">Tạo Application</h4>
+	<h4 id="create-a-new-application">Create a new Application</h4>
 <ol>
-<li>Tìm <code>Elastic Beanstalk</code> trên thanh tìm kiếm và chọn <strong>Elastic Beanstalk</strong>.</li>
+<li>Find <code>Elastic Beanstalk</code> and select <strong>Elastic Beanstalk</strong>.</li>
 </ol>
 <p><img alt="0001" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0001.svg"></p>
 <ol start="2">
-<li>Chọn <strong>Applications</strong> sau đó chọn <strong>Create application</strong>.</li>
+<li>Select <strong>Applications</strong> and then click <strong>Create application</strong>.</li>
 </ol>
 <p><img alt="0002" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0002.svg"></p>
 <ol start="3">
-<li>Nhập <strong>Application name</strong> là <code>fcj-aws-application</code>. Chọn <strong>Create</strong>.</li>
+<li>Enter <code>fcj-aws-application</code> for <strong>Application name</strong>. Click <strong>Create</strong>.</li>
 </ol>
 <p><img alt="0003" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0003.svg"></p>
-<h4 id="tạo-environment">Tạo Environment</h4>
+<h4 id="create-a-new-environment">Create a new Environment</h4>
 <ol>
-<li>Truy cập vào trang quản trị của Application <strong>fcj-aws-application</strong> vừa tạo, chọn <strong>Create new application</strong>.</li>
+<li>Go to the console of our <strong>fcj-aws-application</strong> application and click <strong>Create new application</strong>.</li>
 </ol>
 <p><img alt="0004" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0004.svg"></p>
 <ol start="2">
-<li>Ở phần <strong>Environment tier</strong>, ta chọn <strong>Web server environment</strong>.</li>
+<li>In <strong>Environment tier</strong>, Select <strong>Web server environment</strong>.</li>
 </ol>
 <p><img alt="0005" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0005.svg"></p>
 <ol start="3">
-<li>Nhập <code>fcj-aws-application-prod-env</code> cho <strong>Environment name</strong> và <strong>Domain</strong> nhằm mục đích đánh dấu đây là Environment dành cho Production(prod).</li>
+<li>Type <code>fcj-aws-application-prod-env</code> for both <strong>Environment name</strong> and <strong>Domain</strong>.</li>
 </ol>
 <p><img alt="0006" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0006.svg"></p>
 <ol start="4">
-<li>Chọn <strong>Check availability</strong>, nếu thông báo <strong>&hellip;is available</strong> hiện lên thì tên bạn đặt là hợp lệ, nếu không bạn có thể đổi tên khác.</li>
+<li>Click <strong>Check availability</strong> to check if your name is valid.</li>
 </ol>
 <p><img alt="0007" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0007.svg"></p>
 <ol start="5">
-<li>Ở phần <strong>Platform</strong> ta chọn <strong>Platform type</strong> là <strong>Managed platform</strong> và chọn <strong>.NET Core on Linux</strong>.</li>
+<li>In <strong>Platform</strong>, select <strong>Managed platform</strong> for <strong>Platform type</strong> and then choose <strong>.NET Core on Linux</strong>.</li>
 </ol>
 <p><img alt="0008" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0008.svg"></p>
 <ol start="6">
-<li>Chọn <strong>Sample application</strong> cho <strong>Application code</strong> để sử dụng sample app AWS cung cấp sẵn.</li>
+<li>Select <strong>Sample application</strong> for <strong>Application code</strong> to utilize AWS providing source code.</li>
 </ol>
 <ul>
-<li>Ở phần <strong>Presets</strong>, chọn <strong>High availability</strong> để xây dựng Environment có độ sẵn sàng cao.</li>
-<li>Chọn <strong>Next</strong>.</li>
+<li>In <strong>Presets</strong> section, select <strong>High availability</strong> for building high availability environment.</li>
+<li>Click <strong>Next</strong>.</li>
 </ul>
 <p><img alt="0009" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0009.svg"></p>
 <ol start="7">
-<li>Chọn <strong>Create and use new service role</strong> để AWS tự động tạo một service role mới.</li>
+<li>Select <strong>Create and use new service role</strong> to generate new service role automatically.</li>
 </ol>
 <ul>
-<li>Chọn <strong>aws-keypair</strong> và <strong>fcj-aws-ec2-instance-profile</strong> đã tạo trong bước trước.</li>
-<li>Chọn <strong>Next</strong>.</li>
+<li>Select <strong>aws-keypair</strong> and <strong>fcj-aws-ec2-instance-profile</strong> created in the previous steps.</li>
+<li>Click <strong>Next</strong>.</li>
 </ul>
 <p><img alt="0010" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0010.svg"></p>
 <ol start="9">
-<li>Chọn <strong>fcj-aws-vpc</strong>.</li>
+<li>Select <strong>fcj-aws-vpc</strong>.</li>
 </ol>
 <p><img alt="0011" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0011.svg"></p>
 <ol start="10">
-<li>Chọn <strong>2 Private Subnet</strong> cho <strong>Instance Subnets</strong>.</li>
+<li>Select <strong>2 Private Subnet</strong> for <strong>Instance Subnets</strong>.</li>
 </ol>
 <p><img alt="0012" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0012.svg"></p>
 <ol start="11">
-<li>Cuộn xuống và chọn <strong>Next</strong>.</li>
+<li>Scroll down then select <strong>Next</strong>.</li>
 </ol>
 <p><img alt="0013" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0013.svg"></p>
 <ol start="12">
-<li>Chọn <strong>Monitoring interval</strong> là <strong>1 minute</strong>, cứ mỗi 1 phút thì sẽ cập nhật số liệu 1 lần.</li>
+<li>Select <strong>1 minute</strong> for <strong>Monitoring interval</strong>, that means EC2 instance will send metrics for each minute.</li>
 </ol>
 <ul>
-<li>Phần <strong>EC2 security groups</strong> ta có thể bỏ trống vì Elastic Beanstalk sẽ tự động tạo mới một security group và gán cho EC2 Instance.</li>
+<li>When initialization, Elastic Beanstalk creates a new Security Group for EC2 Instance, so we can skip <strong>EC2 security groups</strong> section.</li>
 </ul>
 <p><img alt="0014" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0014.svg"></p>
 <ol start="13">
-<li>Chọn <strong>Load balanced</strong> cho <strong>Environment type</strong> và chọn số lượng instance tối thiểu/tối đa, ta có thể để mặc định tối thiểu là 1 và tối đa là 4.</li>
+<li>Select <strong>Load balanced</strong> for <strong>Environment type</strong> then type the number of minimum instances and maximum instances.</li>
 </ol>
 <p><img alt="0015" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0015.svg"></p>
 <ol start="14">
-<li><strong>Instance types</strong>, chọn <strong>t2.micro</strong>.</li>
+<li><strong>Instance types</strong>, select <strong>t2.micro</strong>.</li>
 </ol>
 <p><img alt="0016" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0016.svg"></p>
-
-<div class="notices tip" ><p>Ở phần <strong>Scaling triggers</strong> ta có thể giữ các giá trị mặc định. AWS Elastic Beanstalk sẽ tự động tăng giảm số lượng instance khi lưu lượng mạng đi của mỗi instance lớn hơn 6MB và bé hơn 2MB.
-<img alt="Scaling trigger" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/scaling_trigger.svg"></p>
-</div>
-
 <ol start="15">
-<li>Ở phần <strong>Load balancer subnets</strong>, chọn <strong>2 Public Subnet</strong>.</li>
+<li>In the <strong>Load balancer subnets</strong> section, select <strong>2 Public Subnet</strong>.</li>
 </ol>
 
-<div class="notices tip" ><p>Ở bước này mặc định AWS sẽ chọn sẵn <strong>2 Private Subnet</strong>, nếu ta để mặc định thì Load balancer sẽ không thể nhận traffic.</p>
+<div class="notices tip" ><p>AWS by default selects 2 Private Subnet, so if we leave it as its default values, the load balancer can&rsquo;t receive traffic.</p>
 </div>
 
 <p><img alt="0017" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0017.svg"></p>
 <ol start="16">
-<li>Chọn <strong>Application load balancer</strong> và <strong>Dedicated</strong> cho <strong>Load balancer type</strong>.</li>
+<li>Select <strong>Application load balancer</strong> and <strong>Dedicated</strong> for <strong>Load balancer type</strong>.</li>
 </ol>
 <p><img alt="0018" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0018.svg"></p>
 <ol start="17">
-<li>Chọn <strong>Next</strong>.</li>
+<li>Select <strong>Next</strong>.</li>
 </ol>
 <p><img alt="0019" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0019.svg"></p>
 <ol start="18">
-<li>Ta chọn <strong>Enhanced</strong> cho <strong>Health reporting system</strong>.</li>
+<li>Select <strong>Enhanced</strong> for <strong>Health reporting system</strong>.</li>
 </ol>
 <p><img alt="0020" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0020.svg"></p>
 <ol start="19">
-<li>Chọn <strong>Activated</strong> cho <strong>Log streaming</strong> để ta có thể xem log trên CloudWatch.</li>
+<li>Select <strong>Activated</strong> for <strong>Log streaming</strong> so we can view logs using CloudWatch.</li>
 </ol>
 <p><img alt="0021" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0021.svg"></p>
 <ol start="20">
-<li>Ta có thể nhập email để Elastic Beanstalk thông báo các sự kiện quan trọng khi Environment vận hành.</li>
+<li>Enter your email to receive significant messages from Elastic Beanstalk Environment.</li>
 </ol>
 <p><img alt="0022" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0022.svg"></p>
 <ol start="21">
-<li><strong>Deployment policy</strong> chọn <strong>Rolling</strong> và giữ các giá trị khác mặc định.</li>
+<li><strong>Deployment policy</strong> select <strong>Rolling</strong> and leave others as their default values.</li>
 </ol>
 <ul>
 <li>
-<p>Deployment policy bao gồm các lựa chọn sau:</p>
+<p>Deployment policy types:</p>
 <ul>
-<li><strong>All at once</strong>: Đồng thời triển khai phiên bản application mới trên toàn bộ EC2 Instance, User sẽ không thể truy cập vào website trong một khoảng thời gian ngắn.</li>
-<li><strong>Rolling</strong>: Triển khai theo từng batch. Ví dụ: ta có 10 instance và batch size là 2 thì ta sẽ có mỗi lượt 2 instance sẽ được triển khai.</li>
-<li><strong>Rolling with additional batch</strong>: Như <strong>Rolling</strong> nhưng ở giai đoạn khởi tạo sẽ tự động khởi tạo thêm một số lượng instance nhằm đảm bảo hệ thống đạt được hiệu suất như trước khi triển khai phiên bản mới.</li>
-<li><strong>Immutable</strong>: Triển khai trên một nhóm các instance hoàn toàn khác với các instance đang vận hành sau đó sẽ thay từ từ các instance mới vào các instance cũ.</li>
-<li><strong>Traffic splitting</strong>: Triển khai trên một nhóm các instance hoàn toàn khác với các instance đang vận hành, đồng thời chuyển hướng một lượng traffic từ các instance cũ sang các instance mới.</li>
+<li><strong>All at once</strong>: Deploy the new version to all instances simultaneously. All instances in your environment are out of service for a short time while the deployment occurs.</li>
+<li><strong>Rolling</strong>:  Deploy the new version in batches. Each batch is taken out of service during the deployment phase, reducing your environment&rsquo;s capacity by the number of instances in a batch.</li>
+<li><strong>Rolling with additional batch</strong>: Deploy the new version in batches, but first launch a new batch of instances to ensure full capacity during the deployment process.</li>
+<li><strong>Immutable</strong>: Deploy the new version to a fresh group of instances by performing an immutable update.</li>
+<li><strong>Traffic splitting</strong>: Deploy the new version to a fresh group of instances and temporarily split incoming client traffic between the existing application version and the new one.</li>
 </ul>
 </li>
 </ul>
 <p><img alt="0023" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0023.svg"></p>
 <ol start="22">
-<li>Chọn <strong>Activated</strong> cho <strong>Instance log streaming</strong>.</li>
+<li>Select <strong>Activated</strong> for <strong>Instance log streaming</strong>.</li>
 </ol>
 <ul>
-<li>Chọn <strong>Next</strong>.</li>
+<li>Select <strong>Next</strong>.</li>
 </ul>
 <p><img alt="0024" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0024.svg"></p>
 <ol start="23">
-<li>Review lại cấu hình sau đó chọn <strong>Submit</strong>.</li>
+<li>Review your choices and select <strong>Submit</strong>.</li>
 </ol>
 <p><img alt="0025" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0025.svg"></p>
 <ol start="24">
-<li>Chờ khoảng 10 phút để Environment khởi tạo thành công.</li>
+<li>Wait for about 10 minutes for the environment to be created.</li>
 </ol>
 <p><img alt="0026" src="/images/2-ElasticBeanstalk/2.5-CreateEnv/0026.svg"></p>
 
@@ -1141,10 +1136,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/2-elasticbeanstalk/2.4-instanceprofile/" title="Tạo EC2 Instance Profile"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/2-elasticbeanstalk/2.4-instanceprofile/" title="Create EC2 Instance Profile"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/2-elasticbeanstalk/2.6-testenv/" title="Kiểm tra Environment" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2-elasticbeanstalk/2.6-testenv/" title="Test the Environment" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1154,19 +1149,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1709840783"></script>
-    <script src="/js/perfect-scrollbar.min.js?1709840783"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1709840783"></script>
-    <script src="/js/jquery.sticky.js?1709840783"></script>
-    <script src="/js/featherlight.min.js?1709840783"></script>
-    <script src="/js/highlight.pack.js?1709840783"></script>
+    <script src="/js/clipboard.min.js?1709852926"></script>
+    <script src="/js/perfect-scrollbar.min.js?1709852926"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1709852926"></script>
+    <script src="/js/jquery.sticky.js?1709852926"></script>
+    <script src="/js/featherlight.min.js?1709852926"></script>
+    <script src="/js/highlight.pack.js?1709852926"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1709840783"></script>
-    <script src="/js/learn.js?1709840783"></script>
-    <script src="/js/hugo-learn.js?1709840783"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1709852926"></script>
+    <script src="/js/learn.js?1709852926"></script>
+    <script src="/js/hugo-learn.js?1709852926"></script>
 
-    <link href="/mermaid/mermaid.css?1709840783" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1709840783"></script>
+    <link href="/mermaid/mermaid.css?1709852926" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1709852926"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

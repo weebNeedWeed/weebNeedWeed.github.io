@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="js csstransforms3d">
+<html lang="en" class="js csstransforms3d">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tạo VPC :: Triển khai ứng dụng với CodePipeline và Elastic Beanstalk</title>
+    <title>Create a VPC :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1709840783" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1709840783" rel="stylesheet">
-    <link href="/css/hybrid.css?1709840783" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1709840783" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1709840783" rel="stylesheet">
-    <link href="/css/auto-complete.css?1709840783" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1709840783" rel="stylesheet">
-    <link href="/css/theme.css?1709840783" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1709840783" rel="stylesheet">
+    <link href="/css/nucleus.css?1709852926" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1709852926" rel="stylesheet">
+    <link href="/css/hybrid.css?1709852926" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1709852926" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1709852926" rel="stylesheet">
+    <link href="/css/auto-complete.css?1709852926" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1709852926" rel="stylesheet">
+    <link href="/css/theme.css?1709852926" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1709852926" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1709840783" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1709852926" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1709840783"></script>
+    <script src="/js/jquery-3.3.1.min.js?1709852926"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/2-elasticbeanstalk/2.1-createvpc/">
+  <body class="" data-url="/2-elasticbeanstalk/2.1-createvpc/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1709840783"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1709840783"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1709852926"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1709852926"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1709840783"></script>
+<script type="text/javascript" src="/js/search.js?1709852926"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduction/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/1-introduction/" title="Introduction" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-introduction/">
-           <b> 1. </b> Giới thiệu
+      <a href="/1-introduction/">
+           <b> 1. </b> Introduction
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/" title="Triển khai Elastic Beanstalk Environment" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/" title="Create Elastic Beanstalk Environment" class="dd-item 
         parent
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/">
-           <b> 2. </b> Triển khai Elastic Beanstalk Environment
+      <a href="/2-elasticbeanstalk/">
+           <b> 2. </b> Create Elastic Beanstalk Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.1-createvpc/" title="Tạo VPC" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.1-createvpc/" title="Create a VPC" class="dd-item 
         
         active
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.1-createvpc/">
-           <b> 2.1 </b> Tạo VPC
+      <a href="/2-elasticbeanstalk/2.1-createvpc/">
+           <b> 2.1 </b> Create a VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.2-enablepublicip/" title="Bật Public IP cho Public Subnet" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.2-enablepublicip/" title="Enable auto-assign public IPv4 address" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.2-enablepublicip/">
-           <b> 2.2 </b> Bật Public IP cho Public Subnet
+      <a href="/2-elasticbeanstalk/2.2-enablepublicip/">
+           <b> 2.2 </b> Enable auto-assign public IPv4 address
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +195,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.3-createkeypair/" title="Tạo EC2 Keypair" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.3-createkeypair/" title="Create EC2 Keypair" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.3-createkeypair/">
-           <b> 2.3 </b> Tạo EC2 Keypair
+      <a href="/2-elasticbeanstalk/2.3-createkeypair/">
+           <b> 2.3 </b> Create EC2 Keypair
           
             <i class="fas fa-check read-icon"></i>
           
@@ -223,13 +223,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.4-instanceprofile/" title="Tạo EC2 Instance Profile" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.4-instanceprofile/" title="Create EC2 Instance Profile" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.4-instanceprofile/">
-           <b> 2.4 </b> Tạo EC2 Instance Profile
+      <a href="/2-elasticbeanstalk/2.4-instanceprofile/">
+           <b> 2.4 </b> Create EC2 Instance Profile
           
             <i class="fas fa-check read-icon"></i>
           
@@ -251,13 +251,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.5-createenv/" title="Triển khai Environment" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.5-createenv/" title="Deploy the Environment" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.5-createenv/">
-           <b> 2.5 </b> Triển khai Environment
+      <a href="/2-elasticbeanstalk/2.5-createenv/">
+           <b> 2.5 </b> Deploy the Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -279,13 +279,13 @@
  
   
     
-    <li data-nav-id="/vi/2-elasticbeanstalk/2.6-testenv/" title="Kiểm tra Environment" class="dd-item 
+    <li data-nav-id="/2-elasticbeanstalk/2.6-testenv/" title="Test the Environment" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-elasticbeanstalk/2.6-testenv/">
-           <b> 2.6 </b> Kiểm tra Environment
+      <a href="/2-elasticbeanstalk/2.6-testenv/">
+           <b> 2.6 </b> Test the Environment
           
             <i class="fas fa-check read-icon"></i>
           
@@ -314,13 +314,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/" title="Triển khai CodePipeline" class="dd-item 
+    <li data-nav-id="/3-codepipeline/" title="Deploy CodePipeline" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/">
-           <b> 3. </b> Triển khai CodePipeline
+      <a href="/3-codepipeline/">
+           <b> 3. </b> Deploy CodePipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -345,13 +345,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.1-createbucket/" title="Tạo S3 Bucket" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.1-createbucket/" title="Create a new S3 Bucket" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.1-createbucket/">
-           <b> 3.1 </b> Tạo S3 Bucket
+      <a href="/3-codepipeline/3.1-createbucket/">
+           <b> 3.1 </b> Create a new S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
           
@@ -373,13 +373,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.2-connecttogithub/" title="Kết nối Github với AWS" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.2-connecttogithub/" title="Connect AWS to Github" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.2-connecttogithub/">
-           <b> 3.2 </b> Kết nối Github với AWS
+      <a href="/3-codepipeline/3.2-connecttogithub/">
+           <b> 3.2 </b> Connect AWS to Github
           
             <i class="fas fa-check read-icon"></i>
           
@@ -401,13 +401,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.3-createpipeline/" title="Tạo Pipeline" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.3-createpipeline/" title="Create a new Pipeline" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.3-createpipeline/">
-           <b> 3.3 </b> Tạo Pipeline
+      <a href="/3-codepipeline/3.3-createpipeline/">
+           <b> 3.3 </b> Create a new Pipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -429,13 +429,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.4-addrolepolicy/" title="Add policy to the Service Role" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.4-addrolepolicy/" title="Add Policy for Service Role" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.4-addrolepolicy/">
-           <b> 3.4 </b> Add policy to the Service Role
+      <a href="/3-codepipeline/3.4-addrolepolicy/">
+           <b> 3.4 </b> Add Policy for Service Role
           
             <i class="fas fa-check read-icon"></i>
           
@@ -457,13 +457,13 @@
  
   
     
-    <li data-nav-id="/vi/3-codepipeline/3.5-testpipeline/" title="Kiểm thử Pipeline" class="dd-item 
+    <li data-nav-id="/3-codepipeline/3.5-testpipeline/" title="Test the Pipeline" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-codepipeline/3.5-testpipeline/">
-           <b> 3.5 </b> Kiểm thử Pipeline
+      <a href="/3-codepipeline/3.5-testpipeline/">
+           <b> 3.5 </b> Test the Pipeline
           
             <i class="fas fa-check read-icon"></i>
           
@@ -492,13 +492,13 @@
  
   
     
-    <li data-nav-id="/vi/4-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
+    <li data-nav-id="/4-cleanup/" title="Clean up resources" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-cleanup/">
-           <b> 4. </b> Dọn dẹp tài nguyên
+      <a href="/4-cleanup/">
+           <b> 4. </b> Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -520,11 +520,11 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+                  <a class="padding" href="https://aws.amazon.com/blogs"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
               </li>
           
               <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a>
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
               </li>
           
         </ul>
@@ -549,7 +549,7 @@
                   
                     
                     
-                      <option id="en" value="/2-elasticbeanstalk/2.1-createvpc/">English</option>
+                      <option id="en" value="/2-elasticbeanstalk/2.1-createvpc/" selected>English</option>
                     
                   
               
@@ -563,7 +563,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-elasticbeanstalk/2.1-createvpc/" selected>Tiếng Việt</option>
+                      <option id="vi" value="/vi/2-elasticbeanstalk/2.1-createvpc/">Tiếng Việt</option>
                     
                   
               
@@ -656,7 +656,7 @@
             
           
           
-            <a href='/vi/'>Triển khai ứng dụng với CodePipeline và Elastic Beanstalk</a> > <a href='/vi/2-elasticbeanstalk/'>Triển khai Elastic Beanstalk Environment</a> > Tạo VPC
+            <a href='/'>Implement pipeline for Elastic Beanstalk application</a> > <a href='/2-elasticbeanstalk/'>Create Elastic Beanstalk Environment</a> > Create a VPC
           
         
           
@@ -693,7 +693,7 @@
           
             <h1>
               
-              Tạo VPC
+              Create a VPC
             </h1>
           
 
@@ -701,43 +701,43 @@
 
 
 
-	<h4 id="tạo-mới-một-vpc">Tạo mới một VPC</h4>
+	<h4 id="create-a-new-vpc">Create a new VPC</h4>
 
-<div class="notices info" ><p>Trước khi bắt đầu lab, bạn nên chọn một Region của AWS để triển khai các dịch vụ. Các tài nguyên trong lab này sẽ được tạo trong Region <strong>Singapore (ap-southeast-1)</strong>.</p>
+<div class="notices info" ><p>Before starting ,you need to choose one region deploy AWS services, all resources in this lab is created in region <strong>Singapore (ap-southeast-1)</strong>.</p>
 </div>
 
 <ol>
-<li>Đăng nhập vào bảng điều khiển, tìm <strong>VPC</strong>, chọn <strong>VPC</strong>.</li>
+<li>Search and select ```VPC``.</li>
 </ol>
 <p><img alt="0002" src="/images/2-ElasticBeanstalk/2.1-CreateVPC/0002.svg"></p>
 <ol start="2">
-<li>Ở mục <strong>Resource to create</strong>, chọn <strong>VPC and more</strong></li>
+<li>In <strong>Resource to create</strong> section, select <strong>VPC and more</strong></li>
 </ol>
 <ul>
-<li>Chọn <strong>Auto-generate</strong> và nhập <code>fcj-aws</code> cho mục <strong>Name tag auto-generation</strong>.</li>
+<li>Select <strong>Auto-generate</strong> and type <code>fcj-aws</code> for <strong>Name tag auto-generation</strong>.</li>
 </ul>
 <p><img alt="0003" src="/images/2-ElasticBeanstalk/2.1-CreateVPC/0003.svg"></p>
 <ol start="3">
-<li>Nhập <code>10.10.0.0/16</code> cho mục <strong>IPv4 CIDR Block</strong>.</li>
+<li>Enter <code>10.10.0.0/16</code> for <strong>IPv4 CIDR Block</strong>.</li>
 </ol>
 <p><img alt="0004" src="/images/2-ElasticBeanstalk/2.1-CreateVPC/0004.svg"></p>
 <ol start="4">
-<li>Chọn 2 <strong>AZ</strong>, 2 <strong>Public Subnet</strong> và 2 <strong>Private Subnet</strong>.</li>
+<li>Select 2 <strong>AZ</strong>, 2 <strong>Public Subnet</strong> and 2 <strong>Private Subnet</strong>.</li>
 </ol>
 <p><img alt="0005" src="/images/2-ElasticBeanstalk/2.1-CreateVPC/0005.svg"></p>
 <ol start="5">
-<li>Ở mục <strong>NAT Gateways</strong>, chọn <strong>In 1 AZ</strong>.</li>
+<li>In <strong>NAT Gateways</strong>, select <strong>In 1 AZ</strong>.</li>
 </ol>
 <ul>
-<li>Chọn <strong>None</strong> cho <strong>VPC Endpoints</strong>.</li>
+<li>Select <strong>None</strong> for <strong>VPC Endpoints</strong>.</li>
 </ul>
 <p><img alt="0006" src="/images/2-ElasticBeanstalk/2.1-CreateVPC/0006.svg"></p>
 <ol start="6">
-<li>Chọn <strong>Create VPC</strong>.</li>
+<li>Click <strong>Create VPC</strong>.</li>
 </ol>
 <p><img alt="0007" src="/images/2-ElasticBeanstalk/2.1-CreateVPC/0007.svg"></p>
 <ol start="7">
-<li>Sau khi VPC được khởi tạo thành công, chọn <strong>View VPC</strong> để xem VPC.</li>
+<li>Click <strong>View VPC</strong> to view your VPC after creation.</li>
 </ol>
 <p><img alt="0008" src="/images/2-ElasticBeanstalk/2.1-CreateVPC/0008.svg"></p>
 
@@ -1036,10 +1036,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/2-elasticbeanstalk/" title="Triển khai Elastic Beanstalk Environment"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/2-elasticbeanstalk/" title="Create Elastic Beanstalk Environment"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/2-elasticbeanstalk/2.2-enablepublicip/" title="Bật Public IP cho Public Subnet" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2-elasticbeanstalk/2.2-enablepublicip/" title="Enable auto-assign public IPv4 address" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1049,19 +1049,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1709840783"></script>
-    <script src="/js/perfect-scrollbar.min.js?1709840783"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1709840783"></script>
-    <script src="/js/jquery.sticky.js?1709840783"></script>
-    <script src="/js/featherlight.min.js?1709840783"></script>
-    <script src="/js/highlight.pack.js?1709840783"></script>
+    <script src="/js/clipboard.min.js?1709852926"></script>
+    <script src="/js/perfect-scrollbar.min.js?1709852926"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1709852926"></script>
+    <script src="/js/jquery.sticky.js?1709852926"></script>
+    <script src="/js/featherlight.min.js?1709852926"></script>
+    <script src="/js/highlight.pack.js?1709852926"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1709840783"></script>
-    <script src="/js/learn.js?1709840783"></script>
-    <script src="/js/hugo-learn.js?1709840783"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1709852926"></script>
+    <script src="/js/learn.js?1709852926"></script>
+    <script src="/js/hugo-learn.js?1709852926"></script>
 
-    <link href="/mermaid/mermaid.css?1709840783" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1709840783"></script>
+    <link href="/mermaid/mermaid.css?1709852926" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1709852926"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
