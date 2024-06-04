@@ -18,7 +18,7 @@ disableNextPrev = false
 
 [Languages]
 [Languages.en]
-title = "Start with Amazon VPC and AWS VPN Site-to-Site."
+title = "Workshops for AWS."
 weight = 1
 languageName = "English"
 
@@ -35,7 +35,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj"
 weight = 20
 
 [Languages.vi]
-title = "Triển khai ứng dụng với CodePipeline và Elastic Beanstalk"
+title = "Workshop dành cho AWS."
 weight = 2
 languageName = "Tiếng Việt"
 
